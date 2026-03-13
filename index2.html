@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body
+    id="fullbody"
+    class="min-h-screen flex items-center justify-center bg-gradient-to-r from-indigo-300 via-amber-300 to-indigo-300"
+  >
+    <!-- TODO CARD -->
+    <div
+      id="full-todo"
+      class="  bg-white/40 backdrop-blur-md border border-white/30 shadow-2xl rounded-2xl p-6"
+    >
+      <!-- HEADER -->
+      <div id="header" class="text-center mb-6">
+        <h1
+          class="text-3xl font-black text-gray-800 flex justify-center gap-2 items-center"
+        >
+          <i
+            class="fa-solid fa-clipboard-list fa-flip-horizontal text-indigo-600"
+          ></i>
+
+          TO-DO Task
+        </h1>
+
+        <p id="date-time" class="text-gray-600 text-sm mt-1"></p>
+      </div>
+
+      <!-- INPUT -->
+      <div id="Taskinput" class="flex gap-3 mb-6">
+        <input id="input-field"
+          type="text"
+          placeholder="Add your task here..."
+          class="flex-1 bg-gray-100 focus:ring-2 focus:ring-indigo-400 p-3 rounded-xl outline-none"
+        />
+
+        <button id="add-button"
+          class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 rounded-xl transition duration-200"
+        >
+          <i class="fa-solid fa-calendar-plus"></i>
+        </button>
+      </div>
+
+      <!-- FILTERS -->
+      <div class="flex justify-center gap-6 font-medium">
+        <button class="group relative" id="filter-all">
+          All
+          <span
+            class="absolute left-0 -bottom-1 h-[2px] w-0 bg-indigo-500 transition-all duration-300 group-hover:w-full"
+          ></span>
+        </button>
+
+        <button class="group relative" id="filter-active">
+          Active
+          <span
+            class="absolute left-0 -bottom-1 h-[2px] w-0 bg-indigo-500 transition-all duration-300 group-hover:w-full"
+          ></span>
+        </button>
+
+        <button class="group relative" id="filter-completed">
+          Completed
+          <span
+            class="absolute left-0 -bottom-1 h-[2px] w-0 bg-indigo-500 transition-all duration-300 group-hover:w-full"
+          ></span>
+        </button>
+      </div>
+
+      <!-- TASK LIST -->
+      <div id="Tasklist" class="min-h-[120px]">
+        <ul id="task" class="space-y-2"></ul>
+
+        <!-- EMPTY STATE -->
+        <div
+          id="empty-state"
+          class="flex flex-col items-center justify-center text-gray-500 gap-2 mt-4"
+        >
+          <i class="fa-solid fa-clipboard-list text-3xl"></i>
+          <p class="text-sm">No task added</p>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div id="footer" class="flex justify-between items-center mt-6 text-sm">
+        <p id="items-left" class="text-gray-700">0 items left</p>
+
+        <button
+          id="clear-completed"
+          class="bg-amber-400 hover:bg-amber-500 px-3 py-1 rounded-md text-sm transition"
+        >
+          Clear Completed
+        </button>
+      </div>
+    </div>
+
+    <!-- js
+  -->
+    <script src="script.js"></script>
+  </body>
+</html>
